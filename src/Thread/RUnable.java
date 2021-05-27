@@ -1,6 +1,6 @@
 package Thread;
 
-public class Unable {
+public class RUnable {
   public static void main(String[] args) {
     Thread t =
         new Thread(
