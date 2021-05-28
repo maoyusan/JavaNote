@@ -1,6 +1,10 @@
 package Algorithm;
 
+import annotation.ID;
+
+@ID
 public class Student {
+  int id;
   String name;
   int age;
 
