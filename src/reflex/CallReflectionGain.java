@@ -2,7 +2,7 @@ package reflex;
 
 import java.lang.reflect.Field;
 
-public class ReflectionGain {
+public class CallReflectionGain {
   public static void main(String[] args)
       throws ClassNotFoundException, InstantiationException, IllegalAccessException,
           NoSuchFieldException {

@@ -8,7 +8,7 @@ public class LogInSystem {
   String[] userNames = new String[10];
   String[] passWords = new String[10];
 
-  public static void main(String[] args){
+  public static void main(String[] args) {
     LogInSystem logInSystem = new LogInSystem();
     for (; ; ) {
       System.out.println("欢迎使用本系统！");
@@ -17,22 +17,30 @@ public class LogInSystem {
       System.out.println("查看功能 请按3");
       System.out.println("退出功能 请按4");
 
-      int a ;
+      int a;
       Scanner s = new Scanner(System.in);
       a = s.nextInt();
 
       switch (a) {
-        case 1 -> logInSystem.logIn();
-        case 2 -> logInSystem.zhuCe();
-        case 3 -> logInSystem.look();
-        case 4 -> {
+        case 1:
+          logInSystem.logIn();
+          break;
+        case 2:
+          logInSystem.zhuCe();
+          break;
+        case 3:
+          logInSystem.look();
+          break;
+        case 4:
           System.out.println("感谢您的使用");
           System.exit(0);
-        }
-        default -> System.out.println("无效操作！");
+        default:
+          System.out.println("无效操作！");
+          break;
       }
+    }
   }
-  }
+
   public void logIn() {
     Scanner s = new Scanner(System.in);
     int num = 3;

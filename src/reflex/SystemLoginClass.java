@@ -2,14 +2,14 @@ package reflex;
 
 public class SystemLoginClass {
 
+  int no;
+  int b;
+
   public SystemLoginClass(int no, int b) {
     this.no = no;
     this.b = b;
     System.out.println(no + b);
   }
-
-  int no;
-  int b;
 
   public SystemLoginClass() {}
 

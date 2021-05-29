@@ -7,28 +7,34 @@ public class LotterySystem {
 
   String[] audience = new String[4];
 
-  public static void main(String[] args){
-      LotterySystem  lotterySystem = new  LotterySystem();
-      System.out.println("欢迎使用随机抽观众系统！");
-          for (; ; ) {
-        System.out.println("存储观众 请按1");
-        System.out.println("查看观众 请按2");
-        System.out.println("抽取观众 请按3");
-        System.out.println("关闭系统 请按4");
-        Scanner scanner = new Scanner(System.in);
-        int a = 0;
-        a = scanner.nextInt();
-        switch (a) {
-          case 1 -> lotterySystem.cunChu();
-          case 2 -> lotterySystem.reveal();
-          case 3 -> lotterySystem.siphon();
-          default -> System.exit(0);
-        }
+  public static void main(String[] args) {
+    LotterySystem lotterySystem = new LotterySystem();
+    System.out.println("欢迎使用随机抽观众系统！");
+    for (; ; ) {
+      System.out.println("存储观众 请按1");
+      System.out.println("查看观众 请按2");
+      System.out.println("抽取观众 请按3");
+      System.out.println("关闭系统 请按4");
+      Scanner scanner = new Scanner(System.in);
+      int a = 0;
+      a = scanner.nextInt();
+      switch (a) {
+        case 1:
+          lotterySystem.cunChu();
+          break;
+        case 2:
+          lotterySystem.reveal();
+          break;
+        case 3:
+          lotterySystem.siphon();
+          break;
+        default:
+          System.exit(0);
       }
-
     }
+  }
 
-   public void cunChu() {
+  public void cunChu() {
     Scanner scanner = new Scanner(System.in);
     for (int i = 1; i < audience.length; i++) {
       if (audience[i] == null) {
