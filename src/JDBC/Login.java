@@ -14,54 +14,52 @@ public class Login {
   }
 
   private static Boolean login(Map<String, String> userinfo) {
-    String un = userinfo.get("loginName");
-    String ps = userinfo.get("passWord");
+    String ur = userinfo.get("loginName");
+    String psw = userinfo.get("passWord");
     ResourceBundle r = ResourceBundle.getBundle("JDBC/Info");
     String driver = r.getString("driver");
     String url = r.getString("url");
     String user = r.getString("user");
     String password = r.getString("password");
     Connection conn = null;
-    Statement stat = null;
+    PreparedStatement ps = null;
     ResultSet rs = null;
     Boolean result = false;
 
     try {
       Class.forName(driver);
       conn = DriverManager.getConnection(url, user, password);
-      stat = conn.createStatement();
-      rs =
-          stat.executeQuery(
-              "select *from t_user where username = '" + un + "' and password ='" + ps + "'");
+      ps = conn.prepareStatement("select *from test.t_user where username =?  and password =?");
+      ps.setString(1, ur);
+      ps.setString(2, psw);
+      rs = ps.executeQuery();
       if (rs.next()) {
-
         result = true;
       }
-    } catch (ClassNotFoundException e) {
+    } catch (ClassNotFoundException | SQLException e) {
       e.printStackTrace();
-    } catch (SQLException throwables) {
-      throwables.printStackTrace();
     } finally {
-    }
-    if (conn != null) {
-      try {
-        conn.close();
-      } catch (SQLException throwables) {
-        throwables.printStackTrace();
+
+      if (conn != null) {
+        try {
+          conn.close();
+        } catch (SQLException throwables) {
+          throwables.printStackTrace();
+        }
       }
-    }
-    if (stat != null) {
-      try {
-        stat.close();
-      } catch (SQLException throwables) {
-        throwables.printStackTrace();
+      if (ps != null) {
+        try {
+          ps.close();
+        } catch (SQLException throwables) {
+          throwables.printStackTrace();
+        }
       }
-    }
-    if (rs != null) {
-      try {
-        rs.close();
-      } catch (SQLException throwables) {
-        throwables.printStackTrace();
+      if (rs != null) {
+        try {
+          rs.close();
+        } catch (SQLException throwables) {
+          throwables.printStackTrace();
+        }
       }
     }
     return result;
