@@ -14,6 +14,7 @@ public class CharacterStream {
       while ((count = reader.read(chars)) != -1) {
         System.out.print(new String((chars), 0, count));
       }
+
     } catch (IOException e) {
       e.printStackTrace();
     } finally {

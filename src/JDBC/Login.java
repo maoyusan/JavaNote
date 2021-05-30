@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 public class Login {
   public static void main(String[] args) {
+
     Map<String, String> map = initUi();
     Boolean success = login(map);
     System.out.println(success ? "成功成功" : "登录失败");
