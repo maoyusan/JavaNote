@@ -15,12 +15,7 @@ public class JdbcUtil {
 
   public static Connection conn() throws SQLException {
     Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/test", "root", "123456");
-    if (conn != null) {
-      System.out.println("登录成功！");
-      return conn;
-    }
-    System.out.println("登录失败！");
-    return null;
+    return conn;
   }
 
   public static void close(Connection con, PreparedStatement ps, ResultSet rs) {

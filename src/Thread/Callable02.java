@@ -12,6 +12,7 @@ public class Callable02 {
 }
 
 class C implements Callable {
+
   @Override
   public Object call() throws Exception {
     System.out.println("hello");

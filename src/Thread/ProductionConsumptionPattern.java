@@ -6,13 +6,10 @@ import java.util.List;
 public class ProductionConsumptionPattern {
   public static void main(String[] args) {
     List<Object> list = new ArrayList<>();
-
-    Thread t1 = new Thread(new Warehouse(list));
-    Thread t2 = new Thread(new Consumption(list));
-    t1.setName("生产线程");
-    t2.setName("消费线程");
-    t1.start();
-    t2.start();
+    new Thread(new Warehouse(list)).setName("生产线程");
+    new Thread(new Consumption(list)).setName("消费线程");
+    new Thread(new Warehouse(list)).start();
+    new Thread(new Consumption(list)).start();
   }
 }
 
