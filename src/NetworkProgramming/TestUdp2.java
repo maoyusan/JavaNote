@@ -17,7 +17,7 @@ public class TestUdp2 {
       ds.receive(dp);
       String str = new String(dp.getData(), 0, dp.getLength());
       System.out.println("学生: " + str);
-      if ("byebye".equals(str)) {
+      if ("bye".equals(str)) {
         System.out.println("学生下线了");
         break;
       }

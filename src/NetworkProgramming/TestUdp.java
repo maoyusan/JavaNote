@@ -17,7 +17,7 @@ public class TestUdp {
       byte[] b = str.getBytes();
       DatagramPacket dp = new DatagramPacket(b, b.length, InetAddress.getLocalHost(), 9999);
       ds.send(dp);
-      if ("byebye".equals(str)) {
+      if ("bye".equals(str)) {
         System.out.println("您下线了");
         break;
       }

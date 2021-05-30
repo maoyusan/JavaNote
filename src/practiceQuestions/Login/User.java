@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class User implements Serializable {
-  private static final long serialVersionUID = -5939909164401212366L;
+  private static final long serialVersionUID = 6811444387101577751L;
   Map<String, String> data = init();
 
   private static Map<String, String> init() {
