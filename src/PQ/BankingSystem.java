@@ -1,4 +1,4 @@
-package practiceQuestions;
+package PQ;
 
 public class BankingSystem {
 

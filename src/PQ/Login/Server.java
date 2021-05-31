@@ -1,4 +1,4 @@
-package practiceQuestions.Login;
+package PQ.Login;
 
 import java.io.IOException;
 import java.net.ServerSocket;
