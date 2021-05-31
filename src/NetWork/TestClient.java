@@ -1,4 +1,4 @@
-package NetworkProgramming;
+package NetWork;
 
 import java.io.*;
 import java.net.Socket;
