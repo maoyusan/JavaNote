@@ -1,4 +1,4 @@
-package Algorithm;
+package Amarry;
 
 import java.util.*;
 

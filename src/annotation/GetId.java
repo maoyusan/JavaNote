@@ -4,7 +4,7 @@ import java.lang.reflect.Field;
 
 public class GetId {
   public static void main(String[] args) throws ClassNotFoundException {
-    Class c = Class.forName("Algorithm.Student");
+    Class c = Class.forName("Amarry.Student");
 
     if (c.isAnnotationPresent(ID.class)) {
       Boolean b = false;
