@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<students>
+    <student>
+        <name>李四</name>
+        <age>18</age>
+        <university><![CDATA[野鸡大学]]></university>
+    </student>
+
+    <student>
+        <name>李四</name>
+        <age>37</age>
+        <university>野鸡大学2</university>
+    </student>
+
+    <student>
+        <name>王五</name>
+        <age>22</age>
+        <university>野鸡大学3</university>
+    </student>
+
+</students>

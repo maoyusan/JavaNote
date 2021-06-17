@@ -1,11 +1,6 @@
 package JDBC;
 
-import com.mysql.cj.jdbc.Driver;
-
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class JdbcTest01 {
   public static void main(String[] args) {
@@ -20,10 +15,7 @@ public class JdbcTest01 {
           DriverManager.getConnection(
               "jdbc:mysql://42.192.37.101:3306/mysql0991851_db", "mysql0991851", "Huajian1314");
       System.out.println(con);
-      String msql = """
-                    insert into test.xs
-                    values ('张三');
-                    """;
+      String msql = "insert into test.xs values ('张三');";
       /*创建一个操作mysql对象*/
       stmt = con.createStatement();
       /*执行MySQL inset into delete select语句*/
@@ -35,6 +27,7 @@ public class JdbcTest01 {
     } finally {
       try {
         /*分开try 关闭通道*/
+        assert stmt != null;
         stmt.close();
       } catch (SQLException throwables) {
         throwables.printStackTrace();

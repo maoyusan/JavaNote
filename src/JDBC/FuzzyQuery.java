@@ -7,6 +7,7 @@ import java.sql.SQLException;
 
 public class FuzzyQuery {
   public static void main(String[] args) {
+
     Connection conn = null;
     PreparedStatement ps = null;
     ResultSet rs = null;
